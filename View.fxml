@@ -8,24 +8,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene_main_controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene_main_controller">
    <children>
-      <Label layoutX="372.0" layoutY="56.0" text="CRUD Data">
+      <Label layoutX="330.0" layoutY="56.0" text="CRUD Data">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="348.0" layoutY="25.0" text="Mini-Project05">
+      <Label layoutX="306.0" layoutY="25.0" text="Mini-Project05">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <ImageView fitHeight="94.0" fitWidth="112.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="94.0" fitWidth="112.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@asset/Logo-ITC-PNG.png" />
          </image>
       </ImageView>
-      <ListView fx:id="listview" layoutX="109.0" layoutY="96.0" prefHeight="317.0" prefWidth="616.0" />
+      <ListView fx:id="listview" layoutX="43.0" layoutY="117.0" prefHeight="288.0" prefWidth="663.0" />
       <Button layoutX="600.0" layoutY="424.0" mnemonicParsing="false" text="Delete">
          <font>
             <Font size="18.0" />
@@ -46,12 +46,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="label_status" layoutX="638.0" layoutY="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="20.0" prefWidth="181.0" text="Status">
+      <Label fx:id="label_status" layoutX="553.0" layoutY="487.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="20.0" prefWidth="181.0" text="Status">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="94.0" fitWidth="102.0" layoutX="729.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="94.0" fitWidth="102.0" layoutX="638.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@asset/Logo-GTR-PNG.png" />
          </image>
