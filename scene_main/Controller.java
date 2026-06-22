@@ -1,6 +1,10 @@
 package scene_main;
 
+
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,11 +38,19 @@ public class Controller {
     }
 
     @FXML
-    void on_read(ActionEvent event) {
+    void on_read(ActionEvent event) throws IOException {
         var stage = (Stage) label_status.getScene().getWindow();
         var file_chooser = new FileChooser();
-        var file = file_chooser.showOpenDialog(stage);
+        var selected = file_chooser.showOpenDialog(stage);
 
+        
+
+        var data = new ArrayList<String>();
+        for (var line : Files.readAllLines(selected.toPath())){
+            data.add(line);
+        }
+        
+        listview.getItems().addAll(data);
     }
 
     @FXML
@@ -48,6 +60,12 @@ public class Controller {
 
     @FXML
     void initialize() {
+        // var data = new ArrayList<String>();
+        // data.add("Durain");
+        // data.add("Dragon Fruit");
+
+
+        // listview.getItems().addAll(data);
 
     }
 
