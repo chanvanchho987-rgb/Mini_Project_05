@@ -1,5 +1,3 @@
-package scene_main;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -27,8 +25,24 @@ public class scene_main_Controller {
     }
 
     @FXML
+    void on_delete(ActionEvent event) {
+
+    }
+
+    @FXML
+    void on_read(ActionEvent event) {
+
+    }
+
+    @FXML
+    void on_update(ActionEvent event) {
+
+    }
+
+    @FXML
     void initialize() {
-        
+       
+
     }
 
 }
