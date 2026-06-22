@@ -1,3 +1,4 @@
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +11,10 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
 
         var view_main = getClass().getResource("scene_main/View.fxml");
-        var controller_main = new scene_main.scene_main_Controller();
+        var controller_main = new scene_main.Controller();
 
         var loader = new FXMLLoader();
         loader.setLocation(view_main);
