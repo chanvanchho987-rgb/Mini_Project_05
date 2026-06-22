@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 public class Controller {
 
@@ -33,6 +35,9 @@ public class Controller {
 
     @FXML
     void on_read(ActionEvent event) {
+        var stage = (Stage) label_status.getScene().getWindow();
+        var file_chooser = new FileChooser();
+        var file = file_chooser.showOpenDialog(stage);
 
     }
 
@@ -43,7 +48,6 @@ public class Controller {
 
     @FXML
     void initialize() {
-       
 
     }
 
