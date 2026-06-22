@@ -1,3 +1,4 @@
+package scene_main;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -26,9 +27,7 @@ public class scene_main_Controller {
 
     @FXML
     void initialize() {
-        assert label_status != null : "fx:id=\"label_status\" was not injected: check your FXML file 'View.fxml'.";
-        assert listview != null : "fx:id=\"listview\" was not injected: check your FXML file 'View.fxml'.";
-
+       
     }
 
 }
