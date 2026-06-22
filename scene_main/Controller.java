@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,7 +26,7 @@ public class Controller {
     private Label label_status;
 
     @FXML
-    private ListView<?> listview;
+    private ListView<String> listview;
 
     @FXML
     void on_create(ActionEvent event) {
