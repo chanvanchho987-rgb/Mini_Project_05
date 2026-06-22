@@ -1,5 +1,6 @@
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -19,8 +20,14 @@ public class scene_main_Controller {
     private ListView<?> listview;
 
     @FXML
+    void on_create(ActionEvent event) {
+
+    }
+
+    @FXML
     void initialize() {
-        
+        assert label_status != null : "fx:id=\"label_status\" was not injected: check your FXML file 'View.fxml'.";
+        assert listview != null : "fx:id=\"listview\" was not injected: check your FXML file 'View.fxml'.";
 
     }
 
