@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
-public class scene_main_Controller {
+public class Controller {
 
     @FXML
     private ResourceBundle resources;
