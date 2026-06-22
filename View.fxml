@@ -25,7 +25,7 @@
             <Image url="@asset/Logo-ITC-PNG.png" />
          </image>
       </ImageView>
-      <ListView layoutX="109.0" layoutY="96.0" prefHeight="317.0" prefWidth="616.0" />
+      <ListView fx:id="listview" layoutX="109.0" layoutY="96.0" prefHeight="317.0" prefWidth="616.0" />
       <Button layoutX="600.0" layoutY="424.0" mnemonicParsing="false" text="Delete">
          <font>
             <Font size="18.0" />
@@ -46,7 +46,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="638.0" layoutY="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="20.0" prefWidth="181.0" text="Status">
+      <Label fx:id="label_status" layoutX="638.0" layoutY="475.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="20.0" prefWidth="181.0" text="Status">
          <font>
             <Font size="14.0" />
          </font>
