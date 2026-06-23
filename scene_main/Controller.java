@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -61,12 +60,7 @@ public class Controller {
 
     @FXML
     void initialize() {
-        // var data = new ArrayList<String>();
-        // data.add("Durain");
-        // data.add("Dragon Fruit");
-
-
-        // listview.getItems().addAll(data);
+        
 
     }
 
