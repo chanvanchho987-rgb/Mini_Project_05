@@ -25,7 +25,7 @@ public class Main extends Application {
 
         Image icon = new Image(getClass().getResourceAsStream("asset/Logo-ITC-PNG.png"));
         stage.getIcons().add(icon);
-        
+
         stage.setScene(scene);
         stage.show();
 
