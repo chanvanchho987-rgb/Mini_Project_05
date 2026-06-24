@@ -1,6 +1,5 @@
 package scene_main;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -33,7 +32,7 @@ public class Controller {
     private ListView<String> listview;
 
     @FXML
-    void on_create(ActionEvent event) throws IOException{
+    void on_create(ActionEvent event) throws IOException {
 
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
@@ -49,11 +48,18 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
 
-
     }
 
     @FXML
-    void on_delete(ActionEvent event) throws IOException{
+    void on_delete(ActionEvent event) throws IOException {
+
+        var selected_index = listview.getSelectionModel().getSelectedIndex();
+
+        if (selected_index == -1) {
+            return;
+        }
+
+        Global.selected_index = selected_index;
 
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
@@ -68,6 +74,7 @@ public class Controller {
         var scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();
+
     }
 
     @FXML
@@ -77,24 +84,21 @@ public class Controller {
         var file_chooser = new FileChooser();
         var selected = file_chooser.showOpenDialog(stage);
 
-        
-
         var data = new ArrayList<String>();
-        for (var line : Files.readAllLines(selected.toPath())){
+        for (var line : Files.readAllLines(selected.toPath())) {
             data.add(line);
         }
 
         Global.list = data;
 
-        
         listview.getItems().addAll(Global.list);
     }
 
     @FXML
-    void on_update(ActionEvent event) throws IOException{
+    void on_update(ActionEvent event) throws IOException {
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
-        
+
         var view_update = getClass().getResource("../scene_update/View.fxml");
         var controller_update = new scene_update.Controller();
 
@@ -109,7 +113,7 @@ public class Controller {
 
     @FXML
     void initialize() {
-        
+
         listview.getItems().addAll(Global.list);
 
     }

@@ -3,6 +3,8 @@ package scene_delete;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,11 +21,11 @@ public class Controller {
     private URL location;
 
     @FXML
-    void on_no(ActionEvent event) throws IOException{
+    void on_no(ActionEvent event) throws IOException {
 
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
-        
+
         var view_main = getClass().getResource("../scene_main/View.fxml");
         var controller_main = new scene_main.Controller();
 
@@ -37,10 +39,13 @@ public class Controller {
     }
 
     @FXML
-    void on_yes(ActionEvent event) throws IOException{
+    void on_yes(ActionEvent event) throws IOException {
+
+        Global.list.remove(Global.selected_index);
+
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
-        
+
         var view_main = getClass().getResource("../scene_main/View.fxml");
         var controller_main = new scene_main.Controller();
 
