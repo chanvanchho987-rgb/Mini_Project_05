@@ -27,6 +27,9 @@ public class Controller {
     @FXML
     void on_save(ActionEvent event) throws IOException {
 
+        var new_data = textfield.getText();
+        Global.list.set(Global.selected_index, new_data);
+
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 
