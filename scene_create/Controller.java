@@ -1,3 +1,5 @@
+package scene_create;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
