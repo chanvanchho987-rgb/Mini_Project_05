@@ -96,6 +96,15 @@ public class Controller {
 
     @FXML
     void on_update(ActionEvent event) throws IOException {
+
+        var selected_index = listview.getSelectionModel().getSelectedIndex();
+
+        if (selected_index == -1) {
+            return;
+        }
+
+        Global.selected_index = selected_index;
+
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 

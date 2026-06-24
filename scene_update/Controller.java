@@ -3,6 +3,8 @@ package scene_update;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +26,7 @@ public class Controller {
 
     @FXML
     void on_save(ActionEvent event) throws IOException {
+
         var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 
@@ -41,6 +44,9 @@ public class Controller {
 
     @FXML
     void initialize() {
+
+        var selected_index = Global.list.get(Global.selected_index);
+        textfield.setText(selected_index);
 
     }
 
