@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -32,7 +33,9 @@ public class Controller {
     @FXML
     void on_create(ActionEvent event) throws IOException{
 
-        var stage = (Stage) label_status.getScene().getWindow();
+        var node = (Node) event.getSource();
+        var stage = (Stage) node.getScene().getWindow();
+
         var view_create = getClass().getResource("../scene_create/View.fxml");
         var controller_create = new scene_create.Controller();
 
@@ -48,8 +51,21 @@ public class Controller {
     }
 
     @FXML
-    void on_delete(ActionEvent event) {
+    void on_delete(ActionEvent event) throws IOException{
 
+        var node = (Node) event.getSource();
+        var stage = (Stage) node.getScene().getWindow();
+
+        var view_delete = getClass().getResource("../scene_delete/View.fxml");
+        var controller_delete = new scene_delete.Controller();
+
+        var loader = new FXMLLoader();
+        loader.setLocation(view_delete);
+        loader.setController(controller_delete);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -69,8 +85,20 @@ public class Controller {
     }
 
     @FXML
-    void on_update(ActionEvent event) {
+    void on_update(ActionEvent event) throws IOException{
+        var node = (Node) event.getSource();
+        var stage = (Stage) node.getScene().getWindow();
+        
+        var view_update = getClass().getResource("../scene_update/View.fxml");
+        var controller_update = new scene_update.Controller();
 
+        var loader = new FXMLLoader();
+        loader.setLocation(view_update);
+        loader.setController(controller_update);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -24,7 +25,9 @@ public class Controller {
     @FXML
     void on_save(ActionEvent event) throws IOException {
 
-        var stage = (Stage) textfield.getScene().getWindow();
+        var node = (Node) event.getSource();
+        var stage = (Stage) node.getScene().getWindow();
+        
         var view_main = getClass().getResource("../scene_main/View.fxml");
         var controller_main = new scene_main.Controller();
 
